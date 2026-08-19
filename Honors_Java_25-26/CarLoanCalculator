@@ -1,0 +1,74 @@
+//Sanhith Vandara 
+//H. Computer Programming 
+// Mrs. Scullin 
+//January 5th 
+// Main class to test the CarLoan class
+public class Main {
+    public static void main(String[] args) {
+
+        // Valid loan objects
+        CarLoan loan1 = new CarLoan("Challenger", 10000, 3, 0);
+        CarLoan loan2 = new CarLoan("Charger", 50000, 5, 5000);
+        CarLoan loan3 = new CarLoan("Scat Pack", 25000, 1, 2500);
+
+        // Error case: down payment greater than loan amount
+        CarLoan errorLoan1 = new CarLoan("Hellcat", 20000, 4, 25000);
+
+        // Error case: invalid loan length (0 years)
+        CarLoan errorLoan2 = new CarLoan("Challenger", 15000, 0, 1000);
+    }
+}
+
+
+// CarLoan class
+public class CarLoan {
+
+    // Instance fields
+    int carLoan;        // Total loan amount
+    int loanLength;     // Loan length in years
+    int interestRate;   // Interest rate (fixed at 7%)
+    int downPayment;    // Down payment amount
+    String carType;     // Extra credit: type of car
+
+    // Constructor that takes loan amount, loan length, and down payment
+    public CarLoan(String type, int loan, int length, int moneyDown) {
+
+        // Assign constructor parameters to instance fields
+        carType = type;
+        carLoan = loan;
+        loanLength = length;
+        downPayment = moneyDown;
+        interestRate = 7;
+
+        // Check for invalid loan length or interest rate
+        if (loanLength <= 0 || interestRate <= 0) {
+            System.out.println("Error! You must take out a valid car loan.");
+        }
+        // Check if the down payment pays off the car entirely
+        else if (downPayment >= carLoan) {
+            System.out.println("The " + carType + " can be paid in full.");
+        }
+        // Calculate monthly payment
+        else {
+            // Remaining balance after down payment
+            int remainingBalance = carLoan - downPayment;
+
+            // Convert loan length from years to months
+            int months = loanLength * 12;
+
+            // Monthly payment without interest
+            int monthlyBalance = remainingBalance / months;
+
+            // Monthly interest amount
+            int interest = (monthlyBalance * interestRate) / 100;
+
+            // Final monthly payment including interest
+            int monthlyPayment = monthlyBalance + interest;
+
+            // Output the result
+            System.out.println(
+                "Your monthly car payment for the " + carType + " is $" + monthlyPayment
+            );
+        }
+    }
+}
