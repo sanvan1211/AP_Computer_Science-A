@@ -1,0 +1,74 @@
+/* Sanhith Vandara 
+Mrs Scullin 
+honors Comp programming 
+ch6-Array notes */
+
+//import arrays 
+import java.util.Arrays;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+     //delcare + intiailize array 
+     String[]students = {"Ronan", "Marco", "Trent", "Joey", "Riley", "Colin","Danny"};
+     double[]quizGrades = new  double [7];
+      
+    
+     quizGrades[0]= 95.3;
+     quizGrades[1]= 96.2;
+     quizGrades[2]= 97.3;
+     quizGrades[3]= 95.7;
+     quizGrades[4]= 92.6;
+     quizGrades[5]= 94.2;
+     quizGrades[6]= 91.8; 
+     //
+     //print student grades 
+     System.out.println(students[0]+"'s grade is " + quizGrades[0]);
+     System.out.println(students[1]+"'s grade is " + quizGrades[1]);
+     System.out.println(students[2]+"'s grade is " + quizGrades[2]);
+     System.out.println(students[3]+"'s grade is " + quizGrades[3]);
+     System.out.println(students[4]+"'s grade is " + quizGrades[4]);
+     System.out.println(students[5]+"'s grade is " + quizGrades[5]);
+     System.out.println(students[6]+"'s grade is " + quizGrades[6]);
+     
+     //use toString to 
+     System.out.println("the number of studetns in this class is:" + students.length);
+     System.out.println(Arrays.toString(students));
+     System.out.println(Arrays.toString(quizGrades));
+    
+     // arraylists
+    // declare and initialize array lists
+      ArrayList<String> holmesToDos = new ArrayList<String>();
+      holmesToDos.add("Visit a crime scene");
+      holmesToDos.add("Interview suspects");
+      holmesToDos.add("Buy a new hat");
+      holmesToDos.add("Solve a case");
+      
+    ArrayList<String> poirotToDos = new ArrayList<String>();
+     poirotToDos.add("Visit a crime scene");
+     poirotToDos.add("Interview suspect");
+     poirotToDos.add("Buy a new mustache");
+      poirotToDos.add("Solve a case");
+      
+      // use the .size method
+      System.out.println("The length of Sherlock Holmes list is: " + holmesToDos.size());
+      System.out.println("The length of H. Poirot list is: " + poirotToDos.size());
+      
+      // use the .get method
+      System.out.println("Poirot's third task is: " + poirotToDos.get(2));
+      System.out.println("Sherlock's 2nd task is: " + holmesToDos.get(1));
+      
+      // use the .set method 
+      poirotToDos.set(2, "Shave off mustache");
+      holmesToDos.set(3, "Listen to Dr. Watson");
+      
+      // print list, index, and remove
+      System.out.println(poirotToDos.toString());
+      System.out.println("The index of the element is: " + poirotToDos.indexOf("Solve a case"));
+      poirotToDos.remove(2);
+
+
+
+      
+  }
+}
