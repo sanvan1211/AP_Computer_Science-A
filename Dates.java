@@ -47,20 +47,8 @@ public static void main(String[] args)
 
 
 
-/*  This lab showed me how to compare multi-part values by checking
- *   the most significant part first and returning as soon as the
- *   answer is known. The easy part was writing the three comparisons.
- *   The part that needed care was making sure equal dates return false
- *   and that the day is never compared before the month and year are
- *   known to be equal. A common mistake is to test each field
- *   separately (year1 > year2 || month1 > month2 || day1 > day2),
- *   which gives wrong answers like 1/20/2023 vs 5/1/2024. I liked that
- *   the problem was small but still required thinking about edge
- *   cases. A suggestion would be to add a follow-up that validates
- *   dates, for example rejecting a month of 13.
+/*  Post-lab reflection: 
 
-
-
-
+This lab showed me how to compare multi-part values by checking the most significant part first and returning as soon as the answer is known. The easy part was writing the three comparisons. The part that needed care was making sure equal dates return false and that the day is never compared before the month and year are known to be equal. A common mistake is to test each field separately (year1 > year2 || month1 > month2 || day1 > day2), which gives wrong answers like 1/20/2023 vs 5/1/2024. I liked that the problem was small but still required thinking about edge cases. A suggestion would be to add a follow-up that validates dates, for example rejecting a month of 13 or higher 
 
 */
