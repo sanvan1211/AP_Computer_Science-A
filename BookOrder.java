@@ -4,8 +4,6 @@ Sanhith Vandara
 Book Publishing Lab 
 Oct 22 2026
 
-
-
 Pseudocode:
     total = bp + nb
     if total >= 12
