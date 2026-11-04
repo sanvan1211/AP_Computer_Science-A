@@ -1,13 +1,9 @@
+///sanihith vandara 
+//ap csa- mexico population
+
+
 import java.util.Scanner;
 
-/**
- * Mexico Population
- * Prompts the user for a target population (in millions) and prints the year
- * in which Mexico's population will reach or exceed that number, assuming a
- * constant growth rate of 1.1 percent per year.
- *
- * Programmer: Sanhith Vandara
- */
 public class MexicoPopulation
 {
     // Constants
@@ -36,5 +32,9 @@ public class MexicoPopulation
                 + target + " million in the year " + year + ".");
 
         input.close();
+
+
+
+        
     }
 }
